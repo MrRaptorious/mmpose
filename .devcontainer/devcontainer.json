@@ -1,0 +1,16 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+  "runArgs": ["--gpus", "all"],
+
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "pip install -r requirements.txt && pip install -v -e /workspaces/mmpose",
+  
+  "mounts": [
+    "source=/dev/bus/usb,target=/dev/bus/usb,type=bind,consistency=cached",
+  ]
+}
