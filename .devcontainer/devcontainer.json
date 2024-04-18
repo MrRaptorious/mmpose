@@ -12,5 +12,6 @@
   
   "mounts": [
     "source=/dev/bus/usb,target=/dev/bus/usb,type=bind,consistency=cached",
+    "source=D:\\Hka\\Thesis\\DATA,target=/workspaces/mmpose/DATA,type=bind,consistency=cached",
   ]
 }
